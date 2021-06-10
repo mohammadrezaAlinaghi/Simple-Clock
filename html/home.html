@@ -10,34 +10,82 @@
 </head>
 
 <body>
-<div id="clock">
-  <!-- Digital Clock -->
-  <div id="digital">
-    <span id="hour">00</span><i>:</i><span id="min">00</span><i>:</i><span id="second">00</span>
-  </div>
+  <main>
+    <div id="chronometer">
+      <!-- Digital Clock -->
+      <div id="ch-digital">
+        <span id="ch-min">00</span><i>:</i><span id="ch-second">00</span><i>.</i><span id="ch-milisecond">00</span>
+      </div>
+    
+      <!-- Walled Clock -->
+      <div id="ch-walled" class="disable">
+        <div>
+          <div id="ch-w-min-sec">
+            <div>
+              <div id="ch-w-ms-center"></div>
+                <!-- hours mark -->
+                <div id="ch-w-ms-time0"></div>
+                <div id="ch-w-ms-time15"></div>
+                <div id="ch-w-ms-time30"></div>
+                <div id="ch-w-ms-time45"></div>
+                <!-- hours,minutes, seconds hand -->
+                <div class="ch-w-ms-seconds">
+                  <div id="ch-w-ms-second"></div>
+                </div>
+                <div class="ch-w-ms-minutes">
+                  <div id="ch-w-ms-min"></div>
+                </div>
+            </div>
+          </div>
+            <!-- hours mark -->
+            <div id="ch-w-time0"></div>
+            <div id="ch-w-time25"></div>
+            <div id="ch-w-time50"></div>
+            <div id="ch-w-time75"></div>
+            <!-- hours,minutes, seconds hand -->
+            <div class="ch-w-milisec">
+              <div id="ch-w-milisec"></div>
+            </div>
 
-  <!-- Walled Clock -->
-  <div id="walled">
-    <div>
-      <div id="w-center"></div>
-        <!-- hours mark -->
-        <div id="w-time12"></div>
-        <div id="w-time3"></div>
-        <div id="w-time6"></div>
-        <div id="w-time9"></div>
-        <!-- hours,minutes, seconds hand -->
-        <div class="w-seconds">
-          <div id="w-second"></div>
+            <p>
+              RightClick : Run/Stop Timer<br>
+              LeftClick : Reset Timer
+            </p>
         </div>
-        <div class="w-minutes">
-          <div id="w-min"></div>
-        </div>
-        <div class="w-hour">
-          <div id="w-hour"></div>
-        </div>
+      </div>
     </div>
-  </div>
-</div>
+    
+    
+    <div id="clock">
+      <!-- Digital Clock -->
+      <div id="digital">
+        <span id="hour">00</span><i>:</i><span id="min">00</span><i>:</i><span id="second">00</span>
+      </div>
+    
+      <!-- Walled Clock -->
+      <div id="walled">
+        <div>
+          <div id="w-center"></div>
+            <!-- hours mark -->
+            <div id="w-time12"></div>
+            <div id="w-time3"></div>
+            <div id="w-time6"></div>
+            <div id="w-time9"></div>
+            <!-- hours,minutes, seconds hand -->
+            <div class="w-seconds">
+              <div id="w-second"></div>
+            </div>
+            <div class="w-minutes">
+              <div id="w-min"></div>
+            </div>
+            <div class="w-hour">
+              <div id="w-hour"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
 </body>
 <script src='../js/home.js'></script>
 </html>

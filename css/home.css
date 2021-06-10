@@ -56,6 +56,14 @@ table {
 body {
   background-color: #0F0F0F;
   font-size: 16px;
+  overflow: hidden;
+}
+
+main {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 div#clock {
@@ -231,6 +239,258 @@ div#clock > div#walled .w-hour #w-hour::before {
   width: 50%;
   height: 100%;
   background: #dfdfdf;
+}
+
+div#chronometer {
+  position: absolute;
+  left: calc(0% - 250px);
+  top: calc(50% - 300px);
+  width: 500px;
+  height: 600px;
+}
+
+div#chronometer > div#ch-digital {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #f5f5f5;
+  font-family: digital7;
+  font-size: 5em;
+}
+
+div#chronometer > div#ch-digital span, div#chronometer > div#ch-digital i {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+div#chronometer > div#ch-walled {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: #171717;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+          box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+  overflow: hidden;
+  place-items: center;
+}
+
+div#chronometer > div#ch-walled > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec {
+  z-index: 5;
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  left: calc(50% - 75px);
+  top: calc(50% - 105px);
+  width: 150px;
+  height: 150px;
+  background: #171717;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+          box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+  overflow: hidden;
+  place-items: center;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time0, div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time15, div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time30, div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time45 {
+  position: absolute;
+  background: #6d6d6d;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time0, div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time30 {
+  width: 3px;
+  height: 15px;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time15, div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time45 {
+  width: 15px;
+  height: 3px;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time0 {
+  left: calc(50% - 2.5px);
+  top: 0px;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time15 {
+  right: 0px;
+  top: calc(50% - 2.5px);
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time30 {
+  left: calc(50% - 2.5px);
+  bottom: 0px;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-time45 {
+  left: 0px;
+  top: calc(50% - 2.5px);
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-seconds,
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-minutes {
+  position: absolute;
+  top: 50%;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-seconds {
+  width: 80%;
+  height: 4px;
+  z-index: 7;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-seconds #ch-w-ms-second {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-seconds #ch-w-ms-second::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #8B0000;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-minutes {
+  width: 70%;
+  height: 4px;
+  z-index: 6;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-minutes #ch-w-ms-min {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec .ch-w-ms-minutes #ch-w-ms-min::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #ececec;
+}
+
+div#chronometer > div#ch-walled > div > div#ch-w-min-sec #ch-w-ms-center {
+  position: absolute;
+  left: calc(50% - 5px);
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  background-color: #0F0F0F;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+          box-shadow: -4px -4px 10px rgba(50, 50, 50, 0.4), inset 4px 4px 10px rgba(0, 0, 0, 0.4), 5px 5px 10px rgba(0, 0, 0, 0.4), inset -5px -5px 10px rgba(50, 50, 50, 0.4);
+  z-index: 8;
+}
+
+div#chronometer > div#ch-walled p {
+  padding-top: 200px;
+  color: #535353;
+  font-size: 0.75em;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+div#chronometer > div#ch-walled #ch-w-time0, div#chronometer > div#ch-walled #ch-w-time25, div#chronometer > div#ch-walled #ch-w-time50, div#chronometer > div#ch-walled #ch-w-time75 {
+  position: absolute;
+  background: #6d6d6d;
+}
+
+div#chronometer > div#ch-walled #ch-w-time0, div#chronometer > div#ch-walled #ch-w-time50 {
+  width: 5px;
+  height: 25px;
+}
+
+div#chronometer > div#ch-walled #ch-w-time25, div#chronometer > div#ch-walled #ch-w-time75 {
+  width: 25px;
+  height: 5px;
+}
+
+div#chronometer > div#ch-walled #ch-w-time0 {
+  left: calc(50% - 2.5px);
+  top: 0px;
+}
+
+div#chronometer > div#ch-walled #ch-w-time25 {
+  right: 0px;
+  top: calc(50% - 2.5px);
+}
+
+div#chronometer > div#ch-walled #ch-w-time50 {
+  left: calc(50% - 2.5px);
+  bottom: 0px;
+}
+
+div#chronometer > div#ch-walled #ch-w-time75 {
+  left: 0px;
+  top: calc(50% - 2.5px);
+}
+
+div#chronometer > div#ch-walled .ch-w-milisec {
+  position: absolute;
+  top: 50%;
+}
+
+div#chronometer > div#ch-walled .ch-w-milisec {
+  width: 80%;
+  height: 4px;
+  z-index: 4;
+}
+
+div#chronometer > div#ch-walled .ch-w-milisec #ch-w-milisec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+div#chronometer > div#ch-walled .ch-w-milisec #ch-w-milisec::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background: #8B0000;
 }
 
 @media screen and (max-width: 768px) {
